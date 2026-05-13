@@ -61,13 +61,26 @@ Use Obsidian wikilink syntax throughout: `[[Page Name]]` or `[[Page Name|display
 
 A single source typically touches 5–15 wiki pages. Don't skip the cross-referencing step.
 
+After writing all wiki pages for this ingest, run:
+```
+qmd update && qmd embed
+```
+This re-indexes the new pages so they're searchable in future queries.
+
 ### QUERY — when the human asks a question
 
-1. Read `wiki/index.md` to identify relevant pages.
-2. Read those pages in full.
+Use qmd for search — it has hybrid BM25 + vector search over the wiki collection.
+
+1. Run `qmd query "<question>"` to find relevant wiki pages.
+2. Read the top results in full using `qmd get <file>` or the Read tool.
 3. Synthesize an answer with citations (wikilinks to sources).
 4. If the answer is non-trivial, offer to file it as a page in `wiki/analyses/`.
 5. Append a `## [YYYY-MM-DD] query | Question` entry to `wiki/log.md`.
+
+Query tips:
+- `qmd query "caching strategies eviction"` — keyword + semantic hybrid
+- `qmd search "LRU"` — exact BM25 keyword only
+- `qmd vsearch "when should I use a CDN"` — semantic only
 
 ### LINT — when the human asks for a health check
 
