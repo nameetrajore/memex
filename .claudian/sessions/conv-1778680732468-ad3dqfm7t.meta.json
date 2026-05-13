@@ -1,0 +1,22 @@
+{
+  "id": "conv-1778680732468-ad3dqfm7t",
+  "providerId": "claude",
+  "title": "I'll first check what sources are in `raw/` to ...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1778680732468,
+  "updatedAt": 1778683744197,
+  "lastResponseAt": 1778683737782,
+  "sessionId": "3bf8d0f5-c3fd-4316-bfeb-9cd380742f2d",
+  "providerState": {
+    "providerSessionId": "3bf8d0f5-c3fd-4316-bfeb-9cd380742f2d"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 3,
+    "cacheCreationInputTokens": 196,
+    "cacheReadInputTokens": 45664,
+    "contextWindow": 200000,
+    "contextTokens": 45863,
+    "percentage": 23
+  }
+}

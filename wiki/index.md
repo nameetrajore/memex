@@ -34,6 +34,7 @@ Catalog of all wiki pages. Updated on every ingest, query, and lint pass.
 - [[System Design Key Technologies]] — 10 technology categories needed for 90% of system design problems
 - [[System Design Interview Patterns]] — 8 reusable patterns that combine concepts and technologies
 - [[LLM Wiki]] — Karpathy's pattern for LLM-maintained personal knowledge bases (meta-document for this vault)
+- [[QMD]] — On-device hybrid search engine (BM25 + vector + LLM re-ranking) powering this vault's search
 
 ---
 
@@ -60,6 +61,9 @@ Catalog of all wiki pages. Updated on every ingest, query, and lint pass.
 - [[Event Sourcing]] — Immutable event streams, replay, pub/sub
 - [[Distributed Locks]] — Cross-system resource locking with TTL
 - [[Numbers to Know]] — 2026 hardware benchmarks for capacity estimation
+- [[Hybrid Search]] — Combining BM25, vector search, and LLM re-ranking for best-of-both retrieval
+- [[Vector Embeddings]] — Dense numerical representations of text for semantic similarity search
+- [[Reciprocal Rank Fusion]] — Score-agnostic method for merging multiple ranked result lists
 
 ---
 

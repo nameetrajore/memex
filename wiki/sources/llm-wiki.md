@@ -57,7 +57,7 @@ The idea descends from Bush's 1945 vision of the Memex — a personal, curated k
 - **Obsidian Web Clipper** for converting web articles to markdown sources.
 - **Marp** for generating slide decks from wiki content.
 - **Dataview** for querying page frontmatter.
-- **qmd** — local markdown search engine with hybrid BM25/vector search (CLI + MCP server).
+- **[[QMD]]** — local markdown search engine with [[Hybrid Search|hybrid BM25/vector search]] (CLI + MCP server). The search backbone of this vault.
 - The wiki is just a git repo of markdown files — version history and collaboration for free.
 
 ## Related
@@ -65,3 +65,4 @@ The idea descends from Bush's 1945 vision of the Memex — a personal, curated k
 - [[Andrej Karpathy]]
 - [[Vannevar Bush]]
 - [[Hello Interview]]
+- [[QMD]] — the search engine powering this vault's QUERY operation

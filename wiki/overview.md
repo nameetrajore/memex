@@ -4,7 +4,7 @@ type: overview
 tags: [system-design, interviews]
 created: 2026-05-13
 updated: 2026-05-13
-sources: [system-design-in-a-hurry-introduction, how-to-prepare-for-system-design-interviews, core-concepts-for-system-design-interviews, consistent-hashing-deep-dive, cap-theorem-deep-dive, numbers-to-know-deep-dive, llm-wiki]
+sources: [system-design-in-a-hurry-introduction, how-to-prepare-for-system-design-interviews, core-concepts-for-system-design-interviews, consistent-hashing-deep-dive, cap-theorem-deep-dive, numbers-to-know-deep-dive, llm-wiki, qmd]
 ---
 
 # Overview
@@ -36,12 +36,15 @@ Eight reusable patterns combine concepts and technologies: Realtime Updates, Lon
 ### Hardware Reality Check
 Modern hardware is far more powerful than most candidates assume. A single Postgres node handles 50K read TPS and 10–20K write TPS; Redis caches hold up to 1TB with sub-millisecond latency; a single Kafka broker processes 1M msgs/sec. Many systems that seem to need distributed architectures can run on one well-tuned machine. Knowing the [[Numbers to Know|real numbers]] prevents premature sharding, unnecessary caching layers, and over-engineered queue architectures.
 
+### Hybrid Search & Information Retrieval
+[[QMD]] is the search engine powering this vault's QUERY operation. It implements [[Hybrid Search]]: BM25 keyword search (via SQLite FTS5) combined with [[Vector Embeddings|vector semantic search]] (via sqlite-vec and embeddinggemma-300M), fused with [[Reciprocal Rank Fusion]], and refined by LLM re-ranking (qwen3-reranker). The pipeline runs entirely on-device using local GGUF models through node-llama-cpp. Smart chunking (~900 tokens, markdown-aware boundaries, optional AST-aware code splitting) ensures high-quality retrieval. QMD also exposes an MCP server for tighter AI agent integration.
+
 ### Meta: The LLM Wiki Pattern
-This vault follows [[Andrej Karpathy]]'s [[LLM Wiki]] pattern: raw sources are immutable inputs; the LLM builds and maintains all wiki pages; a schema (CLAUDE.md) governs structure and workflows. The human curates sources and asks questions; the LLM handles summarizing, cross-referencing, and bookkeeping. The key insight: wikis fail because maintenance cost exceeds value — LLMs make maintenance cost near zero, so the knowledge compounds.
+This vault follows [[Andrej Karpathy]]'s [[LLM Wiki]] pattern: raw sources are immutable inputs; the LLM builds and maintains all wiki pages; a schema (CLAUDE.md) governs structure and workflows. The human curates sources and asks questions; the LLM handles summarizing, cross-referencing, and bookkeeping. The key insight: wikis fail because maintenance cost exceeds value — LLMs make maintenance cost near zero, so the knowledge compounds. [[QMD]] provides the search layer that lets this pattern scale beyond flat index scanning.
 
 ## Open Questions
 
-*All 16 source documents have been ingested. No outstanding open questions at this time.*
+*All 17 source documents have been ingested. No outstanding open questions at this time.*
 
 ## Related
 
@@ -49,5 +52,8 @@ This vault follows [[Andrej Karpathy]]'s [[LLM Wiki]] pattern: raw sources are i
 - [[log]]
 - [[Hello Interview]]
 - [[LLM Wiki]]
+- [[QMD]]
+- [[Hybrid Search]]
+- [[Vector Embeddings]]
 - [[Andrej Karpathy]]
 - [[Vannevar Bush]]

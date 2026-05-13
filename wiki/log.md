@@ -6,6 +6,11 @@ Format: `## [YYYY-MM-DD] <operation> | <title>`
 
 ---
 
+## [2026-05-13] ingest | QMD
+
+Ingested QMD README — an on-device hybrid search engine combining BM25, vector search, and LLM re-ranking. Created source page with full pipeline documentation. Created new concept pages for Hybrid Search, Vector Embeddings, and Reciprocal Rank Fusion. Updated Database Indexing concept with vector index type and QMD cross-references. Updated LLM Wiki source with QMD wikilink.
+Pages touched: [[QMD]], [[Hybrid Search]], [[Vector Embeddings]], [[Reciprocal Rank Fusion]], [[Database Indexing]], [[LLM Wiki]], [[index]], [[overview]], [[log]]
+
 ## [2026-05-13] ingest | LLM Wiki
 
 Ingested Andrej Karpathy's LLM Wiki pattern document — the meta-document describing the pattern this vault instantiates. Created entity pages for Andrej Karpathy and Vannevar Bush.

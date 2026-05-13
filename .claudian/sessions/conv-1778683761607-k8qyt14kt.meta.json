@@ -1,0 +1,23 @@
+{
+  "id": "conv-1778683761607-k8qyt14kt",
+  "providerId": "claude",
+  "title": "I'll query the knowledge base for networking ba...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1778683761607,
+  "updatedAt": 1778684697520,
+  "lastResponseAt": 1778684444616,
+  "sessionId": "c486a7f9-4ccb-4cb4-8b71-7e708ac6a660",
+  "providerState": {
+    "providerSessionId": "c486a7f9-4ccb-4cb4-8b71-7e708ac6a660"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 1,
+    "cacheCreationInputTokens": 1085,
+    "cacheReadInputTokens": 26180,
+    "contextWindow": 200000,
+    "contextTokens": 27266,
+    "percentage": 14,
+    "contextWindowIsAuthoritative": true
+  }
+}

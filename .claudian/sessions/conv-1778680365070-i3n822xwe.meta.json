@@ -1,0 +1,24 @@
+{
+  "id": "conv-1778680365070-i3n822xwe",
+  "providerId": "claude",
+  "title": "I'll help you ingest new sources into Memex. Le...",
+  "titleGenerationStatus": "success",
+  "createdAt": 1778680365079,
+  "updatedAt": 1778680658313,
+  "lastResponseAt": 1778680644153,
+  "sessionId": "2cc91868-aab7-490c-a31b-9568e7ddc94e",
+  "providerState": {
+    "providerSessionId": "2cc91868-aab7-490c-a31b-9568e7ddc94e"
+  },
+  "currentNote": "CLAUDE.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 8,
+    "cacheCreationInputTokens": 126,
+    "cacheReadInputTokens": 163640,
+    "contextWindow": 200000,
+    "contextTokens": 163774,
+    "percentage": 82,
+    "contextWindowIsAuthoritative": true
+  }
+}

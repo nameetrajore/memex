@@ -19,7 +19,8 @@ Indexes are separate data structures that provide fast lookup paths, avoiding fu
 | **LSM Tree** | Blazing fast writes (sequential I/O). | Slower reads (check multiple SSTables). | Write-heavy: metrics, logs, IoT, time-series. |
 | **Hash** | O(1) exact match. | No range queries, no sorting. | In-memory (Redis). Rarely used on disk. |
 | **Geospatial** | 2D proximity queries. | Specialized. | Location search (Uber, Yelp). |
-| **Inverted** | Full-text search. | Storage overhead, update cost. | Search features (Elasticsearch). |
+| **Inverted** | Full-text search. | Storage overhead, update cost. | Search features (Elasticsearch, [[QMD\|QMD's FTS5]]). |
+| **Vector** | Semantic similarity via [[Vector Embeddings]]. | Requires embedding model, approximate NN. | Semantic search ([[QMD]], Pinecone, pgvector). |
 
 ## B-Tree Details
 - Nodes sized to one disk page (~8KB). ~2–3 page reads for any record.
@@ -52,3 +53,5 @@ Indexes are separate data structures that provide fast lookup paths, avoiding fu
 - [[Core Concepts for System Design Interviews]]
 - [[Data Modeling]]
 - [[Caching]]
+- [[QMD]] — practical example combining FTS5 inverted index + sqlite-vec vector index
+- [[Hybrid Search]] — combines keyword and vector indexes for best-of-both retrieval
