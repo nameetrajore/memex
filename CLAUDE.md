@@ -132,3 +132,8 @@ Operation types: `ingest`, `query`, `lint`, `update`.
 - Prefer updating existing pages over creating new ones when content overlaps.
 - Every new page must be linked from at least one existing page.
 - When in doubt about whether something deserves its own page: yes, create it.
+- **After every operation that changes wiki content, commit and push to GitHub:**
+  ```bash
+  git add -A && git commit -m "ingest: Source Title" && git push
+  ```
+  Use the operation type as the commit prefix: `ingest:`, `query:`, `lint:`, `update:`.
